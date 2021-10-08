@@ -1,0 +1,51 @@
+//Thread Creation
+import java.util.*;
+
+class multithreadDemo extends Thread{
+	public void run() {
+		try {
+			System.out.println("Thread "+Thread.currentThread().getId());
+		}catch(Exception e) {
+			System.out.println("Exception is caught");
+		}
+	}
+}
+
+public class Java {
+	
+	public static void main(String[] args) {
+		
+		for(int i=0;i<8;i++) {
+			multithreadDemo demo = new multithreadDemo();
+			demo.start();
+		}
+		
+	}
+}
+
+
+// Runable Interface
+//Thread Creation
+import java.util.*;
+
+class multithreadDemo implements Runable{
+	public void run() {
+		try {
+			System.out.println("Thread "+Thread.currentThread().getId());
+		}catch(Exception e) {
+			System.out.println("Exception is caught");
+		}
+	}
+}
+
+public class Java {
+	
+	public static void main(String[] args) {
+		
+		for(int i=0;i<8;i++) {
+			multithreadDemo demo = new multithreadDemo();
+			demo.start();
+		}
+		
+	}
+}
